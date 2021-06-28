@@ -67,15 +67,19 @@
     <section>
       <h2>Formulary</h2>
       <form id="form" method="POST">
-        <!-- email -->
-        <label for="email">E-mail</label>
-        <br>
-        <input type="email" id="email" autofocus>
-        <br>
-        <!-- password -->
-        <label for="password">Password</label>
-        <br>
-        <input type="password" id="password">
+        <fieldset>
+          <legend>Login</legend>
+          <!-- email -->
+          <label for="email">E-mail</label>
+          <br>
+          <input type="email" id="email" autofocus>
+          <br>
+          <!-- password -->
+          <label for="password">Password</label>
+          <br>
+          <input type="password" id="password">
+
+        </fieldset>
         <br>
         <!-- checkbox -->
         <label for="interest">Interests</label>
@@ -95,12 +99,26 @@
         <select name="select" id="select">
           <option value="A">A</option>
           <option value="B">B</option>
-          <option value="C">C</option>
+          <option value="C" selected>C</option>
         </select>
+        <br>
+        <!-- datalist -->
+        <label for="browser">Choose a browser</label>
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+          <option value="Chrome">Chrome</option>
+          <option value="Opera">Opera</option>
+        </datalist>
         <br>
         <!-- upload file -->
         <label for="photo"></label>
         <input type="file" id="photo">
+        <br>
+        <progress value="25" max="100"></progress>
+        <br>
+        <!-- area -->
+        <label for="area"></label>
+        <textarea id="area" cols="30" rows="10">Example text</textarea>
         <br>
         <!-- submit -->
         <input type="submit" value="Send">
