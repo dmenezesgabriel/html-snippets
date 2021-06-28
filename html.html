@@ -66,7 +66,51 @@
     </section>
     <section>
       <h2>Formulary</h2>
-      <form action="" method="get"></form>
+      <form id="form" method="POST">
+        <!-- email -->
+        <label for="email">E-mail</label>
+        <br>
+        <input type="email" id="email" autofocus>
+        <br>
+        <!-- password -->
+        <label for="password">Password</label>
+        <br>
+        <input type="password" id="password">
+        <br>
+        <!-- checkbox -->
+        <label for="interest">Interests</label>
+        <br>
+        <input type="checkbox" name="interest" value="music">Music
+        <br>
+        <input type="checkbox" name="interest" value="cinema" checked>Cinema
+        <br>
+        <!-- radio -->
+        <label for="interest-radio">Interests</label>
+        <br>
+        <input type="radio" name="interest-radio" value="music">Music
+        <br>
+        <input type="radio" name="interest-radio" value="cinema" checked>Cinema
+        <br>
+        <!-- selector -->
+        <select name="select" id="select">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+        <br>
+        <!-- upload file -->
+        <label for="photo"></label>
+        <input type="file" id="photo">
+        <br>
+        <!-- submit -->
+        <input type="submit" value="Send">
+        <br>
+        <!-- reset form values -->
+        <input type="reset" value="Clear">
+        <br>
+        <!-- button -->
+        <input type="button" value="Do Nothing">
+      </form>
     </section>
 
   </article>
