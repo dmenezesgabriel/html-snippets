@@ -1,0 +1,1 @@
+Asterisco: seletor universal (\*)

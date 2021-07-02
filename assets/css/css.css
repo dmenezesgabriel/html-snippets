@@ -1,0 +1,23 @@
+h2.blue-h2 {
+  color: blue;
+}
+
+/* Div in Div out (descendent) */
+div p {
+  color: green;
+}
+
+/* Directly tied to it's father */
+div > span {
+  color: purple;
+}
+
+/* adjacent */
+h3 + h4 {
+  color: aqua;
+}
+
+/*  First child */
+.first-child-color p:first-child {
+  color: brown;
+}
