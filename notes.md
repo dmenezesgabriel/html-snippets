@@ -1,1 +1,1 @@
-Asterisco: seletor universal (\*)
+Herança

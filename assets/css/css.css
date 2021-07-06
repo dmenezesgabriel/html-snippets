@@ -1,3 +1,5 @@
+@import url(./external_css.css);
+
 h2.blue-h2 {
   color: blue;
 }
@@ -20,4 +22,188 @@ h3 + h4 {
 /*  First child */
 .first-child-color p:first-child {
   color: brown;
+}
+
+/* Pseudo class for links*/
+a:link {
+  color: green;
+}
+
+a:visited {
+  color: orange;
+}
+/* On Click */
+a:active {
+  color: red;
+}
+
+a:hover {
+  color: yellow;
+}
+
+/* Pseudo class for input */
+input:focus {
+  background-color: aqua;
+}
+
+/* Selector */
+
+input[required] {
+  border-color: red;
+}
+
+input[type="number"] {
+  border-color: blueviolet;
+}
+
+/* Lang starts with pt */
+[lang|="pt"] {
+  font-style: italic;
+  font-size: 2em;
+}
+
+img[title~="sky"] {
+  border: 8px solid yellow;
+  width: 400px;
+}
+
+/* Formatting by id */
+#name {
+  background-color: yellow;
+}
+
+div.inheritance {
+  color: blue;
+}
+p.inherited {
+  color: inherit;
+}
+
+/* Text sizes */
+p#text1 {
+  font-size: 20px;
+}
+
+p#text2 {
+  font-size: 5mm;
+}
+
+p#text3 {
+  font-size: 0.8em;
+}
+
+p#text4 {
+  font-size: 2vw;
+}
+
+/* Div colors */
+div#red {
+  background-color: rgb(255, 0, 0);
+}
+
+div#yellow {
+  background-color: #ff0;
+}
+
+div#grey {
+  background-color: #c0c0c0;
+}
+
+div#green {
+  background-color: hsl(120, 100%, 50%);
+}
+
+div#dark-orchid {
+  background-color: darkorchid;
+  color: #fff;
+}
+
+div#blue0 {
+  background-color: rgba(0, 0, 255, 0);
+}
+
+div#blue02 {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+div#blue05 {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+
+div#blue07 {
+  background-color: rgba(0, 0, 255, 0.7);
+}
+
+div#blue-opaque {
+  background-color: rgba(0, 0, 255, 1);
+}
+/* borders */
+#border-dotted {
+  border: dotted;
+  margin: 10px;
+  padding: 5px;
+}
+
+#border-dashed {
+  border: dashed;
+  margin: 10px;
+  padding: 5px;
+}
+
+#border-solid {
+  border: solid;
+  margin: 10px;
+  padding: 5px;
+}
+
+#border-double {
+  border: double;
+  margin: 10px;
+  padding: 5px;
+}
+
+#border-groove {
+  border: groove;
+  margin: 10px;
+  padding: 5px;
+}
+
+#border-ridge {
+  border: ridge;
+  margin: 10px;
+  padding: 5px;
+}
+
+#border-inset {
+  border: inset;
+  margin: 10px;
+  padding: 5px;
+}
+
+#border-outset {
+  border: outset;
+  margin: 10px;
+  padding: 5px;
+}
+
+#border-none {
+  border: none;
+  margin: 10px;
+  padding: 5px;
+}
+
+#border-hidden {
+  border: hidden;
+  margin: 10px;
+  padding: 5px;
+}
+
+#border-mixed {
+  margin: 10px;
+  padding: 5px;
+
+  border-top: 3px dotted red;
+  border-left: 5px solid black;
+  border-right: 7px groove pink;
+  border-bottom: 6px double green;
 }
