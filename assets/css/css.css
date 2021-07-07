@@ -207,3 +207,31 @@ div#blue-opaque {
   border-right: 7px groove pink;
   border-bottom: 6px double green;
 }
+
+/* Position */
+/* Display */
+/* Font properties */
+
+@media screen {
+  body {
+    background-color: #f1f1f1;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body {
+    background-color: rgb(206, 0, 66);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-color: rgb(66, 0, 206);
+  }
+}
+
+@media print {
+  body {
+    background-color: white;
+  }
+}
