@@ -15,6 +15,7 @@
   <!-- Attribute type is not mandatory -->
   <!-- <link rel="icon" type="image/x-icon" href="./assets/img/html.ico"> -->
   <link rel="stylesheet" type="text/css" href="./assets/css/global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="./assets/js/index.js"></script>
   <!-- Refresh te page every 5 minutes -->
   <meta http-equiv="Refresh" content="300">
@@ -26,30 +27,38 @@
 
 <body>
   <header>
-    <h1>Web Development Basics</h1>
-    <p>View</p>
+    <nav class="top-nav">
+      <a class="icon" onclick="openSideNav()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <div class="top-nav-links">
+        <a href="#Home" class="active">Home</a>
+      </div>
+    </nav>
   </header>
-  <article>
-    <main>
+  <aside>
+    <nav class="side-nav">
+      <a href="javascript:void(0)" class="close-btn" onclick="closeSideNav()">&times;</a>
+      <a href="./internet.html">Internet</a>
+      <a href="./seo.html">seo</a>
+      <a href="./html.html">html</a>
+      <a href="./css.html">css</a>
+      <a href="./javascript.html">javascript</a>
+      <a href="./bootstrap.html">Bootstrap</a>
+    </nav>
+  </aside>
+  <main id="main">
+    <article>
       <section>
-        <h2>Content</h2>
-        <ul>
-          <li><a href="./internet.html">Internet</a></li>
-          <li><a href="./seo.html">seo</a></li>
-          <li><a href="./html.html">html</a></li>
-          <li><a href="./css.html">css</a></li>
-          <li><a href="./javascript.html">javascript</a></li>
-
-        </ul>
-      </section>
-      <section>
+        <h1>Web Development Basics</h1>
+        <p>View</p>
         <h2>Downloads</h2>
         <a href="./assets/css/style.css" download>Download css</a>
       </section>
       <time pubdate="pubdate" datetime="2021-07-06">06 de julho de 2021</time>
-  </article>
+    </article>
   </main>
-  <footer>
+  <footer class="footer">
     <i>Html snippets &copy; 2021</i>
   </footer>
 </body>
