@@ -1,0 +1,7 @@
+.container {
+  background-color: var(--bs-secondary);
+}
+
+.row {
+  background-color: var(--bs-primary);
+}
