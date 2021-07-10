@@ -3,18 +3,11 @@ class Header extends HTMLElement {
     super();
   }
   connectedCallback() {
-    this.innerHTML = `
-    <header>
-      <nav class="top-nav">
-        <div class="top-nav-links">
-          <a class="icon" onclick="openSideNav()">
-            <i class="fa fa-bars"></i>
-          </a>
-          <a href="#Home" class="active">Home</a>
-        </div>
-      </nav>
-    </header>
-    `;
+    fetch("templates/header.html")
+      .then((response) => response.text())
+      .then((html) => {
+        this.innerHTML = html;
+      });
   }
 }
 

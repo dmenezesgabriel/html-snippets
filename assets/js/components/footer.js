@@ -1,13 +1,13 @@
-export class Footer extends HTMLElement {
+class Footer extends HTMLElement {
   constructor() {
     super();
   }
   connectedCallback() {
-    this.innerHTML = `
-    <footer class="footer">
-      <i>Gabriel Menezes - HTML snippets &copy; 2021</i>
-    </footer>
-    `;
+    fetch("templates/footer.html")
+      .then((response) => response.text())
+      .then((html) => {
+        this.innerHTML = html;
+      });
   }
 }
 
