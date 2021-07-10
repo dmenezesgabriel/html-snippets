@@ -1,151 +1,174 @@
+<!-- Document type definition (DTD) -->
 <!DOCTYPE html>
+<!-- Lang is a global attribute that can be used in any html tag, mut is most commonly used at html tag -->
+<!-- Lang attribute affects SEO -->
 <html lang="en">
+
+<!-- Store another important tags -->
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="./assets/css/global.css">
+  <title>HTML Snippets</title>
+  <!-- The tag link is used to link documents -->
+  <!-- Attribute type is not mandatory -->
+  <!-- <link rel="icon" type="image/x-icon" href="./assets/img/html.ico"> -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="./assets/js/index.js"></script>
+  <script src="assets/js/components/header.js"></script>
+  <script src="assets/js/components/sideBar.js"></script>
+  <script src="assets/js/components/footer.js"></script>
+
+
+  <!-- Refresh te page every 5 minutes -->
+  <meta http-equiv="Refresh" content="300">
+  <meta name="keywords" content="html, snippets, web">
+  <meta name="description" content="html - snippets">
+  <meta name="author" content="Gabriel">
 
 </head>
 
-<body>
-  <article>
-    <header>
-      <h1>HTML</h1>
-    </header>
-    <section>
-      The HTML Hyper Text Markup (Language) was created with the purpose of sharing academic researches. And because of
-      that there was no worries with aesthetics formatting, only with standardized documents.
-    </section>
-    <section>
-      <h2>Access Key</h2>
-      <span accesskey="W">Type W</span>
-    </section>
-    <section>
-      <h2>Tab index</h2>
-      <span tabindex="0">Type Tab</span>
-    </section>
-    <section>
-      <h2>Title</h2>
-      <span title="Hello, World!">Put the mouse <b>here</b> for 2 seconds</span>
-    </section>
-    <section>
-      <h2>New Tab</h2>
-      <a href="./html.html" target="_blank">New Tab</a>
-    </section>
-    <section>
-      <h2>Ordered List</h2>
-      <ol>
-        <li>Test 1</li>
-        <li>Test 2</li>
-        <li>Test 3</li>
-      </ol>
-    </section>
-    <section>
-      <h2>Table</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Col A</th>
-            <th>Col B</th>
-            <th>Col C</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Value A1</td>
-            <td>Value B1</td>
-            <td>Value C1</td>
-          </tr>
-          <tr>
-            <td>Value A2</td>
-            <td>Value B2</td>
-            <td>Value C2</td>
-          </tr>
-        </tbody>
-        <tfoot>
+<body onload="setup()">
+  <header-component></header-component>
+  <sidebar-component></sidebar-component>
+  <main id="main">
+    <article>
+      <header>
+        <h1>HTML</h1>
+      </header>
+      <section>
+        The HTML Hyper Text Markup (Language) was created with the purpose of sharing academic researches. And because
+        of
+        that there was no worries with aesthetics formatting, only with standardized documents.
+      </section>
+      <section>
+        <h2>Access Key</h2>
+        <span accesskey="W">Type W</span>
+      </section>
+      <section>
+        <h2>Tab index</h2>
+        <span tabindex="0">Type Tab</span>
+      </section>
+      <section>
+        <h2>Title</h2>
+        <span title="Hello, World!">Put the mouse <b>here</b> for 2 seconds</span>
+      </section>
+      <section>
+        <h2>New Tab</h2>
+        <a href="./html.html" target="_blank">New Tab</a>
+      </section>
+      <section>
+        <h2>Ordered List</h2>
+        <ol>
+          <li>Test 1</li>
+          <li>Test 2</li>
+          <li>Test 3</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Table</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Col A</th>
+              <th>Col B</th>
+              <th>Col C</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Value A1</td>
+              <td>Value B1</td>
+              <td>Value C1</td>
+            </tr>
+            <tr>
+              <td>Value A2</td>
+              <td>Value B2</td>
+              <td>Value C2</td>
+            </tr>
+          </tbody>
+          <tfoot>
 
-        </tfoot>
-      </table>
-    </section>
-    <section>
-      <h2>Formulary</h2>
-      <form id="form" method="GET" action="./index.html">
-        <fieldset>
-          <legend>Login</legend>
-          <!-- email -->
-          <label for="email">E-mail</label>
+          </tfoot>
+        </table>
+      </section>
+      <section>
+        <h2>Formulary</h2>
+        <form id="form" method="GET" action="./index.html">
+          <fieldset>
+            <legend>Login</legend>
+            <!-- email -->
+            <label for="email">E-mail</label>
+            <br>
+            <input type="email" id="email" autofocus>
+            <br>
+            <!-- password -->
+            <label for="password">Password</label>
+            <br>
+            <input type="password" id="password">
+
+          </fieldset>
           <br>
-          <input type="email" id="email" autofocus>
+          <!-- checkbox -->
+          <label for="interest">Interests</label>
           <br>
-          <!-- password -->
-          <label for="password">Password</label>
+          <input type="checkbox" name="interest" value="music">Music
           <br>
-          <input type="password" id="password">
+          <input type="checkbox" name="interest" value="cinema" checked>Cinema
+          <br>
+          <!-- radio -->
+          <label for="interest-radio">Interests</label>
+          <br>
+          <input type="radio" name="interest-radio" value="music">Music
+          <br>
+          <input type="radio" name="interest-radio" value="cinema" checked>Cinema
+          <br>
+          <!-- selector -->
+          <select name="select" id="select">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C" selected>C</option>
+          </select>
+          <br>
+          <!-- datalist -->
+          <label for="browser">Choose a browser</label>
+          <input list="browsers" name="browser">
+          <datalist id="browsers">
+            <option value="Chrome">Chrome</option>
+            <option value="Opera">Opera</option>
+          </datalist>
+          <br>
+          <!-- upload file -->
+          <label for="photo"></label>
+          <input type="file" id="photo">
+          <br>
+          <progress value="25" max="100"></progress>
+          <br>
+          <!-- area -->
+          <label for="area"></label>
+          <textarea id="area" cols="30" rows="10">Example text</textarea>
+          <br>
+          <!-- submit -->
+          <input type="submit" value="Send">
+          <br>
+          <!-- reset form values -->
+          <input type="reset" value="Clear">
+          <br>
+          <!-- button -->
+          <input type="button" value="Do Nothing">
+        </form>
+      </section>
+      <section>
+        <h2>Download</h2>
+        <a href="./assets/css/style.css" download>Download css</a>
+      </section>
 
-        </fieldset>
-        <br>
-        <!-- checkbox -->
-        <label for="interest">Interests</label>
-        <br>
-        <input type="checkbox" name="interest" value="music">Music
-        <br>
-        <input type="checkbox" name="interest" value="cinema" checked>Cinema
-        <br>
-        <!-- radio -->
-        <label for="interest-radio">Interests</label>
-        <br>
-        <input type="radio" name="interest-radio" value="music">Music
-        <br>
-        <input type="radio" name="interest-radio" value="cinema" checked>Cinema
-        <br>
-        <!-- selector -->
-        <select name="select" id="select">
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="C" selected>C</option>
-        </select>
-        <br>
-        <!-- datalist -->
-        <label for="browser">Choose a browser</label>
-        <input list="browsers" name="browser">
-        <datalist id="browsers">
-          <option value="Chrome">Chrome</option>
-          <option value="Opera">Opera</option>
-        </datalist>
-        <br>
-        <!-- upload file -->
-        <label for="photo"></label>
-        <input type="file" id="photo">
-        <br>
-        <progress value="25" max="100"></progress>
-        <br>
-        <!-- area -->
-        <label for="area"></label>
-        <textarea id="area" cols="30" rows="10">Example text</textarea>
-        <br>
-        <!-- submit -->
-        <input type="submit" value="Send">
-        <br>
-        <!-- reset form values -->
-        <input type="reset" value="Clear">
-        <br>
-        <!-- button -->
-        <input type="button" value="Do Nothing">
-      </form>
-    </section>
-    <section>
-      <h2>Download</h2>
-      <a href="./assets/css/style.css" download>Download css</a>
-    </section>
+    </article>
 
-  </article>
-
-  <footer>
-    <i>Html snippets</i>
-  </footer>
+  </main>
+  <footer-component></footer-component>
 </body>
 
 </html>

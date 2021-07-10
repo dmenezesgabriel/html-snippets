@@ -5,6 +5,10 @@ html {
 
 body {
   margin: 0;
+  /* Sticky footer */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .top-nav {
@@ -97,13 +101,14 @@ body {
 #main {
   transition: margin-left 0.5s;
   padding: 20px;
+  /* sticky footer */
+  flex: 1;
 }
 
 .footer {
-  position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   background-color: #333;
   color: white;
   text-align: center;
