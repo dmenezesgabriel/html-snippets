@@ -48,15 +48,6 @@ body {
   padding: 20px;
 }
 
-@media screen and (max-height: 450px) {
-  .side-nav {
-    padding-top: 15px;
-  }
-  .side-nav a {
-    font-size: 18px;
-  }
-}
-
 .top-nav {
   top: 0;
   left: 0;
