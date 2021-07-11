@@ -7,11 +7,14 @@ class SideBar extends HTMLElement {
       .then((response) => response.text())
       .then((html) => {
         this.innerHTML = html;
-        this.setupCollapseAccordion();
+        this.collapseAccordion();
       });
   }
-  setupCollapseAccordion() {
+  collapseAccordion() {
+    console.log("123");
+    console.log(this.querySelector(".sub-nav"));
     let accordions = this.querySelectorAll(".accordion");
+    console.log(accordions.length);
     let accordionCount;
 
     for (
