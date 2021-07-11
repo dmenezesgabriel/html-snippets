@@ -11,10 +11,7 @@ class SideBar extends HTMLElement {
       });
   }
   collapseAccordion() {
-    console.log("123");
-    console.log(this.querySelector(".sub-nav"));
     let accordions = this.querySelectorAll(".accordion");
-    console.log(accordions.length);
     let accordionCount;
 
     for (
@@ -25,7 +22,6 @@ class SideBar extends HTMLElement {
       let accordionObj = accordions[accordionCount];
       accordionObj.addEventListener("click", () => {
         accordionObj.classList.toggle("active");
-        console.log("click");
 
         let subNav = accordionObj.nextElementSibling;
         if (subNav.style.maxHeight) {
