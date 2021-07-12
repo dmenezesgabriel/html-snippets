@@ -6,22 +6,78 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="./assets/css/global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+  <script src="assets/js/components/header.js"></script>
+  <script src="assets/js/components/sideNav.js"></script>
+  <script src="assets/js/components/footer.js"></script>
 </head>
 
 <body>
-  <form method="POST" id="form">
-    <label>
-      <input name="cep" type="text" placeholder="Type your cep">
-    </label>
+  <header-component></header-component>
+  <sidebar-component></sidebar-component>
+  <main id="main">
+    <h1>Javascript</h1>
+    <hr>
+    <article>
+      <section>
+        <h2>Intro</h2>
+        <p>Javascript is a non typed language, so it's not necessary and even possible to describe the variable types.
+        </p>
+        <h3>Variable types</h3>
+        <ul>
+          <li>Undefined</li>
+          <li>Null</li>
+          <li>Boolean</li>
+          <li>String</li>
+          <li>Number</li>
+          <li>Object</li>
+          <li>Array</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Type of</h2>
+        <div id="typeOfExample">
 
-    <label>
-      <input name="address" type="text" placeholder="Type your address">
-    </label>
-    <button>Register</button>
-  </form>
-  <script src="./assets/js/script.js"></script>
+        </div>
+      </section>
+      <section>
+        <h2>Conversion</h2>
+        <div id="ConversionExample">
+
+        </div>
+      </section>
+      <section>
+        <h2>Input to div</h2>
+        <form>
+          <label for="nameInputDiv">Type your name: </label>
+          <input type="text" id="nameInputDiv" />
+          <input type="button" value="Send" id="buttonInputDiv">
+        </form>
+        <div id="inputDiv">
+
+        </div>
+      </section>
+      <section>
+        <h2>Form Validation</h2>
+        <form method="POST" id="form">
+          <label>
+            <input name="cep" type="text" placeholder="Type your cep">
+          </label>
+
+          <label>
+            <input name="address" type="text" placeholder="Type your address">
+          </label>
+          <button>Register</button>
+        </form>
+      </section>
+    </article>
+
+  </main>
+  <footer-component></footer-component>
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/javascript.js"></script>
 
 </body>
 
