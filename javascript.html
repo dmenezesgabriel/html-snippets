@@ -60,14 +60,20 @@
         </div>
       </section>
       <section>
+        <h2>Mouse over event</h2>
+        <div id="square">Pass the mouse over</div>
+      </section>
+
+      <section>
         <h2>Form Validation</h2>
-        <form method="POST" id="form">
+        <div id="cepValidationMessage"></div>
+        <form id="form">
           <label>
-            <input name="cep" type="text" placeholder="Type your cep">
+            <input name="cep" type="text" placeholder="Type your cep" id="cepInput">
           </label>
 
           <label>
-            <input name="address" type="text" placeholder="Type your address">
+            <input name="address" type="text" placeholder="Type your address" id="addressInput">
           </label>
           <button>Register</button>
         </form>

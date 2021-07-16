@@ -132,3 +132,10 @@ input[type="email"]:focus,
 input[type="password"]:focus {
   border: 0.5px solid #333;
 }
+
+div#square {
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  background-color: #deb887;
+}

@@ -31,10 +31,48 @@ function inputDivExample() {
   };
 }
 
+function mouseOverExample() {
+  let divSquare = document.querySelector("#square");
+
+  divSquare.onmouseover = () => {
+    divSquare.style.backgroundColor = "#008000";
+  };
+
+  divSquare.onmouseout = () => {
+    divSquare.style.backgroundColor = "";
+  };
+}
+
+function cepValidationExample() {
+  let cepInput = document.querySelector("#cepInput");
+  let cepValidationMessage = document.querySelector("#cepValidationMessage");
+
+  cepInput.onblur = () => {
+    let cepRegex = new RegExp("^[0-9]{5}-[0-9]{3}$");
+    if (cepRegex.test(cepInput.value) == true) {
+      cepInput.style.borderColor = "#008000";
+      cepValidationMessage.style.color = "#008000";
+      cepValidationMessage.innerHTML = "Valid Postal Code!";
+    } else {
+      cepInput.style.borderColor = "#FF0000";
+      cepValidationMessage.style.color = "#FF0000";
+      cepValidationMessage.innerHTML = "Invalid Postal Code!";
+    }
+  };
+
+  cepInput.onfocus = () => {
+    cepInput.style.borderColor = "";
+    cepValidationMessage.style.color = "";
+    cepValidationMessage.innerHTML = "";
+  };
+}
+
 function setup() {
   typeExample();
   conversionExample();
   inputDivExample();
+  mouseOverExample();
+  cepValidationExample();
 }
 
 window.onload = setup;
