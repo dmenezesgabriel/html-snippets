@@ -58,6 +58,7 @@ body {
   overflow: hidden; /* Disable scroll */
   padding-top: 60px; /* Place the content 60px from the top*/
   transition: 0.5s; /* 0.5 second transition effect to sidenav*/
+  z-index: 0;
 }
 
 .side-nav a {
@@ -74,6 +75,10 @@ body {
 .side-nav a:hover {
   color: #f1f1f1;
   background-color: #04aa6d;
+}
+
+.main-link:hover {
+  transform: translateX(50px) scale(1.2) rotate(10deg);
 }
 
 /* Top right corner */
@@ -110,10 +115,22 @@ body {
   left: 0;
   right: 0;
   background-color: #333;
-  color: white;
   text-align: center;
   font-size: 12px;
   padding: 1rem;
+  height: 40px;
+  padding: 15px;
+}
+
+.copyright {
+  color: white;
+  font: 15px Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.copyright span {
+  color: red;
+  font-size: 22px;
 }
 
 input[type="text"],
@@ -145,4 +162,32 @@ div#square {
   padding: 140px;
   max-width: 940px;
   margin: 0 auto;
+}
+
+.main-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: 20;
+  font-weight: bold;
+}
+
+.main-subtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: 15;
+  font-weight: bold;
+  color: #707070;
+}
+
+.unique-selector {
+  /* All */
+  padding: 10px;
+}
+
+.double-selector {
+  /* Vertical | Horizontal */
+  padding: 20px 10px;
+}
+
+.quadruple-selector {
+  /* top | right | bottom | left */
+  padding: 5px 10px 15px 20px;
 }
