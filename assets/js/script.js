@@ -1,5 +1,4 @@
 function setupListeners() {
-  console.log("Hello");
   let form = document.querySelector("#form");
   let formButton = document.querySelector("form > button");
 
@@ -34,3 +33,5 @@ function validateInputs() {
     }
   }
 }
+
+setupListeners();

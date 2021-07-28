@@ -44,7 +44,7 @@ body {
   color: white;
 }
 
-.top-nav-links {
+.top-nav-shelf {
   transition: margin-left 0.5s;
 }
 
@@ -133,9 +133,36 @@ body {
   font-size: 22px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #04aa6d;
+  font: 18px Arial, Helvetica, sans-serif;
+  padding: 8px 0;
+}
+
+button {
+  border-radius: 5px;
+  border: solid 1px #499e57;
+  padding: 5px 10px;
+  background-color: #04aa6d;
+  color: white;
+  cursor: pointer;
+  font: 15px Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+  background-color: rgba(60, 168, 78, 0.8);
+}
+
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="date"],
+input[type="number"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -146,8 +173,10 @@ input[type="password"] {
 
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="password"]:focus {
-  border: 0.5px solid #333;
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus {
+  border: 0.5px solid #04aa6d;
 }
 
 div#square {
@@ -166,15 +195,28 @@ div#square {
 
 .main-title {
   font-family: Arial, Helvetica, sans-serif;
-  font-style: 20;
+  font-style: 20px;
   font-weight: bold;
 }
 
 .main-subtitle {
   font-family: Arial, Helvetica, sans-serif;
-  font-style: 15;
+  font-style: 15px;
   font-weight: bold;
   color: #707070;
+}
+
+body::-webkit-scrollbar {
+  width: 5px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #c1c1c1; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fb2c70; /* color of the scroll thumb */
+  border-radius: 5px; /* roundness of the scroll thumb */
 }
 
 .unique-selector {

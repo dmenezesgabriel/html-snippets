@@ -1,6 +1,6 @@
 function openSideNav() {
   document.querySelector(".side-nav").style.width = "250px";
-  document.querySelector(".top-nav-links").style.marginLeft = "250px";
+  document.querySelector(".top-nav-links").style.marginLeft = "260px";
 }
 
 function closeSideNav() {
