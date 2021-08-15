@@ -12,6 +12,7 @@ function updateImcTable() {
   };
 
   formObject.addEventListener("submit", callback);
+  console.log(formFields);
 }
 
 function setupListeners() {
