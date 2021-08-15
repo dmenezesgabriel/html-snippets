@@ -2,17 +2,13 @@ function callback(event) {
   // Prevent reload page on submit
   event.preventDefault();
   let formFields = {
-    name: document.querySelector("#form-name").value,
-    date: document.querySelector("#form-date").value,
-    weight: document.querySelector("#form-weight").value,
-    height: document.querySelector("#form-height").value,
+    name: document.querySelector("#form-name"),
+    date: document.querySelector("#form-date"),
+    weight: document.querySelector("#form-weight"),
+    height: document.querySelector("#form-height"),
   };
 
   console.log(formFields.weight, formFields.height);
-  formFields.imc = (
-    formFields.weight /
-    (formFields.height * formFields.height)
-  ).toFixed(2);
 
   let tableBody = document.querySelector("#imc-tbody");
   let tr = document.createElement("tr");
@@ -20,10 +16,21 @@ function callback(event) {
   for (const [key, value] of Object.entries(formFields)) {
     console.log(key, value);
     let td = document.createElement("td");
-    td.textContent = value;
+    td.textContent = value.value;
     tr.appendChild(td);
   }
+
+  let td = document.createElement("td");
+  td.textContent = (
+    formFields.weight.value /
+    (formFields.height.value * formFields.height.value)
+  ).toFixed(2);
+  tr.appendChild(td);
+
   tableBody.appendChild(tr);
+
+  this.reset();
+  formFields.name.focus();
 }
 
 function updateImcTable() {
