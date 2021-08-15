@@ -1,4 +1,6 @@
 /* selector {color: #ffffff;} */
+@import url(./reset-default-styles.css);
+
 html {
   background-color: #f1f1f1;
 }
