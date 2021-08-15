@@ -12,4 +12,3 @@ class Header extends HTMLElement {
 }
 
 customElements.define("header-component", Header);
-console.log("header setup");
