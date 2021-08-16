@@ -12,8 +12,8 @@ export class BodyMeasure {
   }
 
   calculateBMI(weight, height) {
-    weight = parseFloat(weight);
     height = parseFloat(height);
+    weight = parseFloat(weight);
     let bodyMassIndex = (weight / (height * height)).toFixed(2);
     return bodyMassIndex;
   }
