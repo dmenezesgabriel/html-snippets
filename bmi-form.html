@@ -42,19 +42,19 @@
           <div>
             <div class="form-group">
               <label for="form-name">Name: </label>
-              <input type="text" id="form-name" required>
+              <input type="text" id="form-name">
             </div>
             <div class="form-group">
               <label for="form-date">Date: </label>
-              <input type="date" id="form-date" required>
+              <input type="date" id="form-date">
             </div>
             <div class="form-group">
               <label for="form-weight">Weight: </label>
-              <input type="number" step="0.01" id="form-weight" required>
+              <input type="number" step="0.01" id="form-weight">
             </div>
             <div class="form-group">
               <label for="form-height">Height: </label>
-              <input type="number" step="0.01" id="form-height" required>
+              <input type="number" step="0.01" id="form-height">
             </div>
             <button type="submit">Submit</button>
             <button type="reset">Clear</button>
@@ -70,7 +70,7 @@
                 <th scope="col">Date</th>
                 <th scope="col">Weight</th>
                 <th scope="col">Height</th>
-                <th scope="col">IMC</th>
+                <th scope="col">BMI</th>
               </tr>
             </thead>
             <tbody id="imc-tbody">
@@ -83,7 +83,7 @@
   </main>
   <footer-component></footer-component>
   <script src="./assets/js/index.js"></script>
-  <script src="./assets/js/imcForm.js"></script>
+  <script src="./assets/js/controllers/bodyMeasure.js" type="module"></script>
 
 </body>
 
