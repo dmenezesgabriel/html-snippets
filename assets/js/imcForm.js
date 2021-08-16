@@ -1,17 +1,37 @@
-class BodyMeasures {
+class BodyMeasure {
   constructor(userName, date, height, weight) {
-    this.userName = userName;
-    this.date = date;
-    this.height = height;
-    this.weight = weight;
-    this.bodyMassIndex = this.calculateBodyMassIndex(this.weight, this.height);
+    this._userName = userName;
+    this._date = date;
+    this._height = height;
+    this._weight = weight;
+    this._bodyMassIndex = this.calculateBMI(this._weight, this._height);
   }
 
-  calculateBodyMassIndex(weight, height) {
+  calculateBMI(weight, height) {
     weight = parseFloat(weight);
     height = parseFloat(height);
     let bodyMassIndex = (weight / (height * height)).toFixed(2);
     return bodyMassIndex;
+  }
+
+  getUserName() {
+    return this._userName;
+  }
+
+  getDate() {
+    return this._date;
+  }
+
+  getWeight() {
+    return this._weight;
+  }
+
+  getHeight() {
+    return this._height;
+  }
+
+  getBMI() {
+    return this._bodyMassIndex;
   }
 }
 
@@ -25,7 +45,7 @@ function callback(event) {
     height: document.querySelector("#form-height"),
   };
 
-  let bodyMeasure = new BodyMeasures(
+  let bodyMeasure = new BodyMeasure(
     formFields.userName.value,
     new Date(formFields.date.value),
     formFields.height.value,
@@ -35,15 +55,21 @@ function callback(event) {
   let tableBody = document.querySelector("#imc-tbody");
   let tr = document.createElement("tr");
 
-  for (const [key, value] of Object.entries(bodyMeasure)) {
+  [
+    bodyMeasure.getUserName(),
+    bodyMeasure.getDate(),
+    bodyMeasure.getWeight(),
+    bodyMeasure.getHeight(),
+    bodyMeasure.getBMI(),
+  ].forEach((value) => {
     let td = document.createElement("td");
     td.textContent = value;
     tr.appendChild(td);
-  }
+  });
 
   tableBody.appendChild(tr);
 
-  // this.reset();
+  this.reset();
   formFields.userName.focus();
 }
 
