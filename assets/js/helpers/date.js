@@ -1,9 +1,7 @@
 export class DateHelper {
   stringToDate(string) {
     return new Date(
-      ...string.split("-").map((item, index) => {
-        item - (index % 2);
-      })
+      ...string.split("-").map((item, index) => item - (index % 2))
     );
   }
 

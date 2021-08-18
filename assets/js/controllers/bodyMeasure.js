@@ -22,8 +22,8 @@ class BodyMeasureController {
       this._inputName.value,
       // Spread operator
       dateHelper.stringToDate(this._inputDate.value),
-      this._inputHeight.value,
-      this._inputWeight.value
+      this._inputWeight.value,
+      this._inputHeight.value
     );
     let tableBody = document.querySelector("#imc-tbody");
     let tr = document.createElement("tr");
