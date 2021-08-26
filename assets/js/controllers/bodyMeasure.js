@@ -17,11 +17,10 @@ class BodyMeasureController {
   addRecord(event) {
     event.preventDefault();
     console.log(this._inputName);
-    let dateHelper = new DateHelper();
     let bodyMeasure = new BodyMeasure(
       this._inputName.value,
       // Spread operator
-      dateHelper.stringToDate(this._inputDate.value),
+      DateHelper.stringToDate(this._inputDate.value),
       this._inputWeight.value,
       this._inputHeight.value
     );
