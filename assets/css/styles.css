@@ -46,7 +46,7 @@ body {
   color: white;
 }
 
-.top-nav-shelf {
+.top-nav {
   transition: margin-left 0.5s;
 }
 
@@ -77,10 +77,6 @@ body {
 .side-nav a:hover {
   color: #f1f1f1;
   background-color: #04aa6d;
-}
-
-.main-link:hover {
-  transform: translateX(50px) scale(1.2) rotate(10deg);
 }
 
 /* Top right corner */
@@ -122,6 +118,10 @@ body {
   padding: 1rem;
   height: 40px;
   padding: 15px;
+}
+
+.footer {
+  transition: margin-left 0.5s;
 }
 
 .copyright {
