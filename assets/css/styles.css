@@ -2,7 +2,7 @@
 @import url(./reset-default-styles.css);
 
 html {
-  background-color: #f1f1f1;
+  font-family: sans-serif;
 }
 
 body {
@@ -16,19 +16,19 @@ body {
 .top-nav {
   top: 0;
   left: 0;
-  background-color: #333;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .top-nav a {
   height: 100%;
   float: left;
-  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  color: grey;
 }
 
 .top-nav a:hover {
@@ -37,8 +37,7 @@ body {
 }
 
 .top-nav a.active {
-  background: #04aa6d;
-  color: white;
+  background: #ffff;
 }
 
 .top-nav a.icon {
@@ -59,7 +58,7 @@ body {
   background-color: #c1c1c1;
   overflow: hidden; /* Disable scroll */
   padding-top: 60px; /* Place the content 60px from the top*/
-  transition: 0.5s; /* 0.5 second transition effect to sidenav*/
+  transition: left 0.5s ease; /* 0.5 second transition effect to sidenav*/
   z-index: 0;
 }
 
@@ -112,7 +111,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #333;
+  background-color: grey;
   text-align: center;
   font-size: 12px;
   padding: 1rem;
