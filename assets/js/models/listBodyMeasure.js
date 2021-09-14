@@ -12,4 +12,3 @@ class ListBodyMeasures {
   }
 }
 
-//pg 18
