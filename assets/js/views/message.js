@@ -1,12 +1,9 @@
-export class MessageView {
+import { View } from "../views/view.js";
+
+export class MessageView extends View {
   constructor(element) {
-    this._element = element;
+    super(element);
   }
-
-  update(model) {
-    this._element.innerHTML = this._template(model);
-  }
-
   _template(model) {
     return `<p class="alert alert-info">${model.text}</p>`;
   }

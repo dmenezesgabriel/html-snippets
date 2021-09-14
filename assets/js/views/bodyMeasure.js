@@ -1,13 +1,10 @@
 import { DateHelper } from "../helpers/date.js";
+import { View } from "../views/view.js";
 
-export class BodyMeasuresView {
+export class BodyMeasuresView extends View {
   constructor(element) {
-    this._element = element;
+    super(element);
   }
-  update(model) {
-    this._element.innerHTML = this._template(model);
-  }
-
   _template(model) {
     // template string
     // generate the template again every
