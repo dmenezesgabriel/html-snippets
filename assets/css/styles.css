@@ -269,3 +269,11 @@ body::-webkit-scrollbar-thumb {
   float: right;
   padding-right: 8px;
 }
+
+.alert {
+  padding: 20px;
+  background-color: #15bdf0;
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}

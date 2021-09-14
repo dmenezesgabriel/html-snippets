@@ -10,6 +10,8 @@ export class BodyMeasuresView {
 
   _template(model) {
     // template string
+    // generate the template again every
+    // time is called with all elements from bodyMeasures
     return `
           <table class="table">
             <thead>
