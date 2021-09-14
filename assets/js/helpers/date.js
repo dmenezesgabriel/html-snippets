@@ -17,6 +17,6 @@ export class DateHelper {
   }
 
   static dateToString(date) {
-    return `${date.getDate()}/${date.getMont()}/${date.getFullYear()} `;
+    return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} `;
   }
 }

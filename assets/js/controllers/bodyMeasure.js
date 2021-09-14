@@ -28,7 +28,7 @@ class BodyMeasureController {
     let tr = document.createElement("tr");
     [
       bodyMeasure.userName,
-      bodyMeasure.date,
+      DateHelper.dateToString(bodyMeasure.date),
       bodyMeasure.weight,
       bodyMeasure.height,
       bodyMeasure.bmi,
