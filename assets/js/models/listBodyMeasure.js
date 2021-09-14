@@ -8,7 +8,7 @@ class ListBodyMeasures {
   }
 
   get bodyMeasures() {
-    return this._bodyMeasures;
+    // Avoid unwanted changes of list returning a new list
+    return [].concat(this.bodyMeasures);
   }
 }
-
