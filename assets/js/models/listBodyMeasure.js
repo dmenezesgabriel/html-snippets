@@ -1,4 +1,4 @@
-class ListBodyMeasures {
+export class ListBodyMeasures {
   constructor() {
     this._bodyMeasures = [];
   }
@@ -9,6 +9,6 @@ class ListBodyMeasures {
 
   get bodyMeasures() {
     // Avoid unwanted changes of list returning a new list
-    return [].concat(this.bodyMeasures);
+    return [].concat(this._bodyMeasures);
   }
 }

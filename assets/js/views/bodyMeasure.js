@@ -1,12 +1,15 @@
-class BodyMeasuresView {
+import { DateHelper } from "../helpers/date.js";
+
+export class BodyMeasuresView {
   constructor(element) {
     this._element = element;
   }
-  update() {
-    this._element.innerHTML = this._template();
+  update(model) {
+    this._element.innerHTML = this._template(model);
   }
 
-  _template() {
+  _template(model) {
+    // template string
     return `
           <table class="table">
             <thead>
@@ -19,7 +22,19 @@ class BodyMeasuresView {
               </tr>
             </thead>
             <tbody id="imc-tbody">
-
+              ${model.bodyMeasures
+                .map(
+                  (bodyMeasure) => `
+                    <tr>
+                      <td>${bodyMeasure.userName}</td>
+                      <td>${DateHelper.dateToString(bodyMeasure.date)}</td>
+                      <td>${bodyMeasure.weight}</td>
+                      <td>${bodyMeasure.height}</td>
+                      <td>${bodyMeasure.bmi}</td>
+                    </tr>
+                  `
+                )
+                .join("")}
             </tbody>
           </table>
     `;

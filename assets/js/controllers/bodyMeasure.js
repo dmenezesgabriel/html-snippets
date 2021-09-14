@@ -1,6 +1,6 @@
 import { BodyMeasure } from "../models/bodyMeasure.js";
-import { ListBodyMeasure } from "../models/listBodyMeasure.js";
-import { BodyMeasureView } from "../views/bodyMeasure.js";
+import { ListBodyMeasures } from "../models/listBodyMeasure.js";
+import { BodyMeasuresView } from "../views/bodyMeasure.js";
 
 import { DateHelper } from "../helpers/date.js";
 
@@ -14,14 +14,10 @@ class BodyMeasureController {
     this._inputWeight = $("#form-weight");
     this._inputHeight = $("#form-height");
     this.formObject = $("form");
+    this._listBodyMeasures = new ListBodyMeasures();
+    this._bodyMeasuresView = new BodyMeasuresView($("#bodyMeasuresView"));
     // Avoid this pointing to event listener with bind
-    this._listBodyMeasures = new ListBodyMeasure();
-    this._bodyMeasuresView = new BodyMeasureView($("#bodyMeasuresView"));
-    this._bodyMeasuresView.update();
-    this._bodyMeasuresView = new this.formObject.addEventListener(
-      "submit",
-      this.addRecord.bind(this)
-    );
+    this.formObject.addEventListener("submit", this.addRecord.bind(this));
   }
 
   _createBodyMeasure() {
@@ -36,23 +32,10 @@ class BodyMeasureController {
 
   addRecord(event) {
     event.preventDefault();
-    let bodyMeasure = _createBodyMeasure();
-    this._listBodyMeasure.add(bodyMeasure);
-
-    // let tableBody = document.querySelector("#imc-tbody");
-    // let tr = document.createElement("tr");
-    // [
-    //   bodyMeasure.userName,
-    //   DateHelper.dateToString(bodyMeasure.date),
-    //   bodyMeasure.weight,
-    //   bodyMeasure.height,
-    //   bodyMeasure.bmi,
-    // ].forEach((value) => {
-    //   let td = document.createElement("td");
-    //   td.textContent = value;
-    //   tr.appendChild(td);
-    // });
-    // tableBody.appendChild(tr);
+    let bodyMeasure = this._createBodyMeasure();
+    this._listBodyMeasures.add(bodyMeasure);
+    this._bodyMeasuresView.update(this._listBodyMeasures);
+    this._clearForm();
   }
 
   _clearForm() {
