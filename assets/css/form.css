@@ -1,0 +1,45 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #04aa6d;
+  font: 18px Arial, Helvetica, sans-serif;
+  padding: 8px 0;
+}
+
+button {
+  border-radius: 5px;
+  border: solid 1px #499e57;
+  padding: 5px 10px;
+  background-color: #04aa6d;
+  color: white;
+  cursor: pointer;
+  font: 15px Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+  background-color: rgba(60, 168, 78, 0.8);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 0.5px solid grey;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus {
+  border: 0.5px solid #04aa6d;
+}

@@ -1,0 +1,26 @@
+.footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: grey;
+  text-align: center;
+  font-size: 12px;
+  padding: 1rem;
+  height: 40px;
+  padding: 15px;
+}
+
+.footer {
+  transition: margin-left 0.5s;
+}
+
+.copyright {
+  color: white;
+  font: 15px Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.copyright span {
+  color: red;
+  font-size: 22px;
+}
